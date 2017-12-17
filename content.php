@@ -34,7 +34,7 @@
 				?>
 			</div><!--/.entry-->
 			
-			<a class="more-link-custom" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><span><i><?php _e('Czytaj dalej','anew'); ?></i></span></a>
+			<a class="more-link-custom" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><span><i><?php _e('More','anew'); ?></i></span></a>
 			
 		</div><!--/.post-content-->
 	
