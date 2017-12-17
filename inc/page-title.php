@@ -5,8 +5,9 @@
 		<h1>
 			<?php if ( have_posts() ): ?><i class="fa fa-search"></i><?php endif; ?>
 			<?php if ( !have_posts() ): ?><i class="fa fa-exclamation-circle"></i><?php endif; ?>
+			<?php _e('Results','anew'); ?> 
 			<?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo $search_count;?> 
-			<?php _e('Results','anew'); ?> <span><?php _e('for','anew'); ?> "<?php echo get_search_query(); ?>"</span>
+			<span><?php _e('for','anew'); ?> "<?php echo get_search_query(); ?>"</span>
 		</h1>
 		<?php get_search_form(); ?>
 			
