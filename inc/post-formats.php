@@ -127,7 +127,7 @@
 <?php if ( has_post_format( 'image' ) ): // Image ?>
 
 	<div class="post-format">
-		<div class="image-container">
+		<div class="image-container post-image">
 			<?php 
 				if ( has_post_thumbnail() ) 
 			:?>
