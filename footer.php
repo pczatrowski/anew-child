@@ -1,37 +1,7 @@
 		</div><!--/.main-->
 	</div><!--/.container-inner-->
 	
-	<footer id="footer">	
-<!--<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.js"></script>-->
-<script type="text/javascript" src="//tropimy.com/wp-content/ptb/jquery-2.1.0-minified.js"></script>
-<script type="text/javascript">
-$(window).load(function(){
-// Disable scroll zooming and bind back the click event
-var onMapMouseleaveHandler = function (event) {
-  var that = $(this);
-
-  that.on('click', onMapClickHandler);
-  that.off('mouseleave', onMapMouseleaveHandler);
-  that.find('iframe').css("pointer-events", "none");
-}
-
-var onMapClickHandler = function (event) {
-  var that = $(this);
-
-  // Disable the click handler until the user leaves the map area
-  that.off('click', onMapClickHandler);
-
-  // Enable scrolling zoom
-  that.find('iframe').css("pointer-events", "auto");
-
-  // Handle the mouse leave event
-  that.on('mouseleave', onMapMouseleaveHandler);
-}
-
-// Enable map zooming with mouse scroll when the user clicks the map
-$('.maps').on('click', onMapClickHandler);
-});
-</script>
+	<footer id="footer">
 		<?php // footer widgets
 			$total = 4;
 			if ( ot_get_option( 'footer-widgets' ) != '' ) {
