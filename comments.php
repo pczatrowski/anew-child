@@ -4,7 +4,7 @@
 	
 	<?php if ( have_comments() ) : global $wp_query; ?>
 	
-		<h3 class="heading"><?php comments_number( __( 'Brak komentarzy', 'anew' ), __( '1 komentarz', 'anew' ), __( 'Komenatrze: %', 'anew' ) ); ?></h3>
+		<h3 class="heading"><?php comments_number( __( 'No Responses', 'anew' ), __( '1 Response', 'anew' ), __( '% Responses', 'anew' ) ); ?></h3>
 	
 		<ul class="comment-tabs group">
 			<li class="active"><a href="#commentlist-container"><i class="fa fa-comments-o"></i><?php _e( 'Komentarze', 'anew' ); ?><span><?php echo count($wp_query->comments_by_type['comment']); ?></span></a></li>
