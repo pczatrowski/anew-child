@@ -66,8 +66,8 @@ src="https://www.facebook.com/tr?id=425244511001743&ev=PageView&noscript=1"
 				
 				<div class="container">	
 					<div class="toggle-search">SZUKAJ <i class="fa fa-search"></i></div>
-					<div class="search-expand">
-						<div class="search-expand-inner">
+					<div class="search-expand" id="search-window">
+						<div class="search-expand-inner" id="search-window-inner">
 							<?php get_search_form(); ?>
 						</div>
 					</div>

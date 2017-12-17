@@ -7,6 +7,20 @@
 	Copyright: (c) 2013 Alexander "Alx" Agnarson, http://alxmedia.se
 */
 
+function hasParentWithID( node, id )
+{
+     var n = node;
+     while (n != null)
+	 {
+         if (n.id == id)
+		 {
+             return true;
+         }
+         n = n.parentNode;
+     }
+     return false;
+}
+
 jQuery(document).ready(function($) {
 
 /*  Toggle header search
@@ -17,7 +31,22 @@ jQuery(document).ready(function($) {
             setTimeout(function(){
                 $('.search-expand input').focus();
             }, 300);
+			return false;
 	});
+	
+	$(window).click(function( e )
+		{
+			if ($("#search-window").is(":visible"))
+			{
+				//alert( e.target.className );
+				if ( !hasParentWithID( e.target, 'search-window-inner' ) )
+				{
+					//alert( e.target.className );
+					$("#search-window").toggle("slide");
+				}
+			}
+		});
+	
 	
 /*  Scroll to top
 /* ------------------------------------ */
