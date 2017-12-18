@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hueman\n"
 "POT-Creation-Date: 2013-12-27 14:36+0100\n"
-"PO-Revision-Date: 2017-12-18 00:55+0100\n"
+"PO-Revision-Date: 2017-12-18 21:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -36,7 +36,7 @@ msgstr "Komentarze: %"
 
 #: ../comments.php:10
 msgid "Comments"
-msgstr ""
+msgstr "Komentarze"
 
 #: ../comments.php:11
 msgid "Pingbacks"
@@ -48,7 +48,7 @@ msgstr "Czytaj dalej"
 
 #: ../footer.php:60
 msgid "All Rights Reserved."
-msgstr ""
+msgstr "Wszelkie prawa zastrzeżone."
 
 #: ../footer.php:66
 msgid "Powered by"
@@ -65,10 +65,12 @@ msgstr "SZUKAJ"
 #: ../search.php:11
 msgid "Sorry, no posts matched your criteria. Try again with some other terms."
 msgstr ""
+"Przykro mi, nie znaleźliśmy żadnych wpisów spełniających kryteria "
+"wyszukiwania. Spróbuj innego zapytania."
 
 #: ../searchform.php:3
 msgid "To search type and hit enter"
-msgstr ""
+msgstr "Wpisz zapytanie i naciśnij Enter"
 
 #: ../sidebar.php:9
 msgid "Expand Sidebar"
@@ -76,27 +78,27 @@ msgstr ""
 
 #: ../single.php:37
 msgid "Pages:"
-msgstr ""
+msgstr "Strony:"
 
 #: ../single.php:40
 msgid "Tags:"
-msgstr ""
+msgstr "Tagi:"
 
 #: ../functions/widgets/alx-tabs.php:27
 msgid "Recent Posts"
-msgstr ""
+msgstr "Ostatnie wpisy"
 
 #: ../functions/widgets/alx-tabs.php:28
 msgid "Popular Posts"
-msgstr ""
+msgstr "Popularne wpisy"
 
 #: ../functions/widgets/alx-tabs.php:29
 msgid "Recent Comments"
-msgstr ""
+msgstr "Najnowsze komentarze"
 
 #: ../functions/widgets/alx-tabs.php:30
 msgid "Tags"
-msgstr ""
+msgstr "Tagi"
 
 #: ../functions/widgets/alx-tabs.php:185
 msgid "says:"
@@ -112,19 +114,19 @@ msgstr "dla"
 
 #: ../inc/page-title.php:14
 msgid "Error 404."
-msgstr ""
+msgstr "Błąd 404."
 
 #: ../inc/page-title.php:14
 msgid "Page not found!"
-msgstr ""
+msgstr "Nie znaleziono strony!"
 
 #: ../inc/page-title.php:19
 msgid "Author:"
-msgstr ""
+msgstr "Autor:"
 
 #: ../inc/page-title.php:22
 msgid "Category:"
-msgstr ""
+msgstr "Kategoria:"
 
 #: ../inc/page-title.php:30
 msgid "Tagged:"
@@ -132,21 +134,21 @@ msgstr ""
 
 #: ../inc/page-title.php:33
 msgid "Daily Archive:"
-msgstr ""
+msgstr "Archiwum dzienne:"
 
 #: ../inc/page-title.php:36
 msgid "Monthly Archive:"
-msgstr ""
+msgstr "Archiwum miesiąca:"
 
 #: ../inc/page-title.php:39
 msgid "Yearly Archive:"
-msgstr ""
+msgstr "Archiwum roku:"
 
 #: ../inc/page-title.php:42 ../inc/page-title.php:44 ../inc/page-title.php:46
 #: ../inc/page-title.php:48 ../inc/page-title.php:50 ../inc/page-title.php:52
 #: ../inc/page-title.php:54 ../inc/page-title.php:56 ../inc/page-title.php:58
 msgid "Type:"
-msgstr ""
+msgstr "Typ:"
 
 #: ../inc/page-title.php:42
 msgid "Audio"
@@ -158,15 +160,15 @@ msgstr ""
 
 #: ../inc/page-title.php:46
 msgid "Chat"
-msgstr ""
+msgstr "Czat"
 
 #: ../inc/page-title.php:48
 msgid "Gallery"
-msgstr ""
+msgstr "Galeria"
 
 #: ../inc/page-title.php:50
 msgid "Image"
-msgstr ""
+msgstr "Zdjęcie"
 
 #: ../inc/page-title.php:52
 msgid "Link"
@@ -174,7 +176,7 @@ msgstr ""
 
 #: ../inc/page-title.php:54
 msgid "Quote"
-msgstr ""
+msgstr "Cytat"
 
 #: ../inc/page-title.php:56
 msgid "Status"
@@ -182,12 +184,12 @@ msgstr ""
 
 #: ../inc/page-title.php:58
 msgid "Video"
-msgstr ""
+msgstr "Wideo"
 
 #: ../inc/post-nav.php:3
 msgid "Next"
-msgstr ""
+msgstr "Następny"
 
 #: ../inc/post-nav.php:4
 msgid "Previous"
-msgstr ""
+msgstr "Poprzedni"
