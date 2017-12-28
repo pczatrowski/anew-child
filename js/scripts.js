@@ -49,66 +49,47 @@ jQuery(document).ready(function($) {
 		
 		/* resize begin */
 		
-		$(function()
+		function resizeImage( image )
 		{
-			var win = $(window),
-				fullscreen = $('.single'),
-				image = fullscreen.find('.full-screen'),
-				imageWidth = image.width(),
-				imageHeight = image.height(),
-				imageRatio = imageWidth / imageHeight;
-
-			function resizeImage()
-			{
-				var winWidth = $(window).innerWidth(),
-					winHeight = win.innerHeight(),
-					winRatio = winWidth / winHeight;
-					p = image.parents('p', 'full-parent');
-					//p = image.parent('p');
+			var fullscreen = $('.single'),
+				images = fullscreen.find('.full-screen');
 			
-				if ( winRatio > imageRatio )
+			images.each( function() {					
+				var image = $(this);
+				var imageRatio = image.width() / image.height();
+				
+				// a little bit hacky - assuming parent-child relation
+				var parentP;
+				if ( image.parent().is( 'p' ) )
 				{
-					var newWidth = winWidth;
-					var newHeight = Math.round( winWidth / imageRatio );
+					parentP = image.parent();
 				}
 				else
 				{
-					var newWidth = Math.round(winHeight * imageRatio);
-					var newHeight = winHeight;
+					parentP = image.parent( 'a' ).parent( 'p' );
 				}
+		
+				var newWidth = $(window).innerWidth();
+				var newHeight = Math.round( newWidth / imageRatio );
 				
-				/*
 				image.removeAttr('sizes').width( newWidth ).height( newHeight ).css({
 						width: newWidth,
 						height: newHeight
 							});
-				//*/
-				//*
-				image.removeAttr('sizes').removeAttr('width').removeAttr('height').css({
-						width: newWidth,
-						height: newHeight
-							}).css("display","");
-				//*/
-				p.addClass('full-parent');
-
-				jQuery( ".full-screen" ).each( function() 
-				{
-					imgHeight = $(this).height();
-					$(this).parents( 'p', 'full-parent' ).css(
-					//$(this).parent( 'p' ).css(
-					{
-						height: imgHeight
-					}
-					)
-				});
-			}
-
-			win.bind(
-			{
+				parentP.addClass('full-parent');
+				
+				parentP.css( { height: newHeight } );
+			} );
+		}
+		
+		$(function()
+		{
+			resizeImage();
+			
+			$(window).bind({
 				load: function() { resizeImage(); },
 				resize: function() { resizeImage(); }
-			}
-			);
+			});
 	});
 	/* resize end */	
 	
