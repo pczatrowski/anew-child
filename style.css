@@ -69,3 +69,33 @@ a img
 {
 	margin-bottom: 25px;
 }
+
+/* fullsize images begin*/
+.container
+{
+	position: static;
+}
+
+.container .full-screen { max-width:none; }
+
+.main { position: static; }
+
+.content { position: static; }
+
+.post-format { position: static; }
+
+.post-inner { position: static; }
+
+.full-parent .full-screen
+{
+    position: absolute;
+    left: 0;
+    height: auto !important;
+	overflow: none;
+}
+
+.full-parent .full-screen:after
+{
+    content: ' ';
+}
+/* fullsize images begin*/

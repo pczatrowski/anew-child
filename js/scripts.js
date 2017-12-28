@@ -46,7 +46,71 @@ jQuery(document).ready(function($) {
 				}
 			}
 		});
-	
+		
+		/* resize begin */
+		
+		$(function()
+		{
+			var win = $(window),
+				fullscreen = $('.single'),
+				image = fullscreen.find('.full-screen'),
+				imageWidth = image.width(),
+				imageHeight = image.height(),
+				imageRatio = imageWidth / imageHeight;
+
+			function resizeImage()
+			{
+				var winWidth = $(window).innerWidth(),
+					winHeight = win.innerHeight(),
+					winRatio = winWidth / winHeight;
+					p = image.parents('p', 'full-parent');
+					//p = image.parent('p');
+			
+				if ( winRatio > imageRatio )
+				{
+					var newWidth = winWidth;
+					var newHeight = Math.round( winWidth / imageRatio );
+				}
+				else
+				{
+					var newWidth = Math.round(winHeight * imageRatio);
+					var newHeight = winHeight;
+				}
+				
+				/*
+				image.removeAttr('sizes').width( newWidth ).height( newHeight ).css({
+						width: newWidth,
+						height: newHeight
+							});
+				//*/
+				//*
+				image.removeAttr('sizes').removeAttr('width').removeAttr('height').css({
+						width: newWidth,
+						height: newHeight
+							}).css("display","");
+				//*/
+				p.addClass('full-parent');
+
+				jQuery( ".full-screen" ).each( function() 
+				{
+					imgHeight = $(this).height();
+					$(this).parents( 'p', 'full-parent' ).css(
+					//$(this).parent( 'p' ).css(
+					{
+						height: imgHeight
+					}
+					)
+				});
+			}
+
+			win.bind(
+			{
+				load: function() { resizeImage(); },
+				resize: function() { resizeImage(); }
+			}
+			);
+	});
+	/* resize end */	
 	
 /*  Scroll to top
 /* ------------------------------------ */
